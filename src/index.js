@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import SearchBar from './components/search_bar';
 
 class App extends Component {
 	constructor(props){
 		super(props);
+		this.state = {term: 'default'};
 	}
 	render() {
-		return <h1>classical Component works too</h1>
+		return (
+			<SearchBar passState={this.state.term}/>
+		)
 	}
 }
 
